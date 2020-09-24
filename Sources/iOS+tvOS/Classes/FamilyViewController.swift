@@ -187,6 +187,13 @@ open class FamilyViewController: UIViewController, FamilyFriendly {
     scrollView.purgeWrapperViews()
   }
 
+    open func removeChild(_ childController: UIViewController) {
+        childController.removeFromParent()
+        purgeRemovedViews()
+
+        scrollView.purgeWrapperViews()
+    }
+
   /// Adds the specified view controller as a child of the current view controller.
   /// The view handler is used to resolve another view for the view controller that should
   /// be added into the view heirarcy.
